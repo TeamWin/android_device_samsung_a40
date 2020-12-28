@@ -17,7 +17,6 @@
 # Release name
 PRODUCT_RELEASE_NAME := a40
 
-
 $(call inherit-product, build/target/product/embedded.mk)
 
 # Inherit from our custom product configuration
