@@ -34,8 +34,6 @@ TARGET_USES_64_BIT_BINDER := true
 ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
 
-ALLOW_MISSING_DEPENDENCIES=true
-
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := universal7904
 TARGET_NO_BOOTLOADER := true
@@ -44,11 +42,10 @@ TARGET_NO_RADIOIMAGE := true
 # Kernel
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
+BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --header_version 1 --board SRPSA16C003RU
 BOARD_INCLUDE_RECOVERY_DTBO := true
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/recovery_dtbo
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image
-
-BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --header_version 1 --board SRPSA16C003RU
 
 # Platform
 TARGET_BOARD_PLATFORM := exynos5
@@ -74,6 +71,7 @@ TARGET_RECOVERY_PIXEL_FORMAT := "ABGR_8888"
 
 # TWRP specific build flags
 RECOVERY_VARIANT := twrp
+ALLOW_MISSING_DEPENDENCIES=true
 TW_THEME := portrait_hdpi
 RECOVERY_SDCARD_ON_DATA := true
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel/brightness"
