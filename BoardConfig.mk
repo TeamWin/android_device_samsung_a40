@@ -88,16 +88,3 @@ TW_EXTRA_LANGUAGES := true
 TW_USE_NEW_MINADBD := true
 BOARD_SUPPRESS_SECURE_ERASE := true
 PLATFORM_SECURITY_PATCH := 2099-12-31
-
-# SHRP specific build flags
-SHRP_PATH := device/samsung/a40
-SHRP_MAINTAINER := ponces
-SHRP_DEVICE_CODE := a40
-SHRP_EDL_MODE := 0
-SHRP_EXTERNAL := /external_sd
-SHRP_INTERNAL := /sdcard
-SHRP_OTG := /usb_otg
-SHRP_FLASH := 0
-SHRP_REC := /dev/block/platform/13500000.dwmmc0/by-name/recovery
-SHRP_REC_TYPE := Treble
-SHRP_DEVICE_TYPE := Fake_A/B
